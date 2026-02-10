@@ -40,12 +40,32 @@
     <nav class="nxl-navigation">
         <div class="navbar-wrapper">
             <div class="m-header">
-                <a href="index.html" class="b-brand">
-                    <!-- ========   change your logo hear   ============ -->
-                    <img src="assets/images/logo-full.png" alt="" class="logo logo-lg" />
-                    <img src="assets/images/logo-abbr.png" alt="" class="logo logo-sm" />
-                </a>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/lambang-jatim.webp" alt="Lambang Provinsi Jawa Timur"
+                        class="logo logo-lg" />
+                    <div class="d-none d-md-block">
+                        <div class="fw-bold text-dark" style="font-size: 14px; line-height: 1;">
+                            DATA EKONOMI
+                        </div>
+                        <div class="fw-semibold text-primary" style="font-size: 13px; line-height: 1;">
+                            PROVINSI JAWA TIMUR
+                        </div>
+                    </div>
+                </div>
             </div>
+            <style>
+                .logo-lg {
+                    height: 48px;
+                    width: auto;
+                    object-fit: contain;
+                }
+
+                .logo-sm {
+                    height: 32px;
+                    width: auto;
+                    object-fit: contain;
+                }
+            </style>
             <div class="navbar-content">
                 <ul class="nxl-navbar">
                     <li class="nxl-item nxl-caption">
@@ -53,18 +73,18 @@
                     </li>
                     <li class="nxl-item nxl-hasmenu">
                         <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-airplay"></i></span>
+                            <span class="nxl-micon"><i class="feather-trending-up"></i></span>
                             <span class="nxl-mtext">Pertumbuhan Ekonomi</span><span class="nxl-arrow"><i
                                     class="feather-chevron-right"></i></span>
                         </a>
                         <ul class="nxl-submenu">
                             <li class="nxl-item"><a class="nxl-link" href="index.html">Ringkasan</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="analytics.html">PDRB</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="pdrb-pertumbuhan-ekonomi.html">PDRB</a></li>
                         </ul>
                     </li>
                     <li class="nxl-item nxl-hasmenu">
                         <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-airplay"></i></span>
+                            <span class="nxl-micon"><i class="feather-dollar-sign"></i></span>
                             <span class="nxl-mtext">Inflasi</span><span class="nxl-arrow"><i
                                     class="feather-chevron-right"></i></span>
                         </a>
@@ -75,7 +95,7 @@
                     </li>
                     <li class="nxl-item nxl-hasmenu">
                         <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-airplay"></i></span>
+                            <span class="nxl-micon"><i class="feather-shopping-cart"></i></span>
                             <span class="nxl-mtext">Epik</span><span class="nxl-arrow"><i
                                     class="feather-chevron-right"></i></span>
                         </a>
@@ -513,7 +533,6 @@
                                 data-bs-auto-close="outside"> Mega Menu </a>
                             <div class="dropdown-menu nxl-h-dropdown" id="mega-menu-dropdown">
                                 <div class="d-lg-flex align-items-start">
-                                    <!--! [Start] nxl-mega-menu-tabs !-->
                                     <div class="nav flex-column nxl-mega-menu-tabs" role="tablist"
                                         aria-orientation="vertical">
                                         <button class="nav-link active nxl-mega-menu-sm" data-bs-toggle="pill"
