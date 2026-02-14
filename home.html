@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data Ekonomi Jawa Timur</title>
+
+    <!-- Bootstrap (pakai yang lokal kalau sudah ada) -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="assets/css/home.css" />
+</head>
+
+<body class="home">
+
+    <!-- NAVBAR -->
+    <nav class="topnav">
+        <div class="container-xxl d-flex align-items-center justify-content-end gap-4">
+            <a class="topnav-link is-active" href="home.html">Home</a>
+            <a class="topnav-link" href="pdrb-pertumbuhan-ekonomi.html">Pertumbuhan Ekonomi</a>
+            <a class="topnav-link" href="inflasi.html">Inflasi</a>
+            <a class="topnav-link" href="epik.html">EPIK</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container-xxl hero-inner">
+
+            <div class="hero-center reveal reveal-up d-2">
+                <!-- top logos -->
+                <div class="hero-logos reveal reveal-up d-1">
+                    <img src="assets/images/logo-1.png" alt="Logo 1" />
+                    <img src="assets/images/logo-2.png" alt="Logo 2" />
+                    <img src="assets/images/logo-3.png" alt="Logo 3" />
+                </div>
+
+                <div class="hero-kicker">DATA EKONOMI</div>
+                <img class="hero-emblem" src="assets/images/lambang-jatim.png" alt="Lambang Jatim" />
+                <h1 class="hero-title">
+                    JAWA<br />TIMUR
+                </h1>
+
+                <a class="cta-pill" href="#makro-ekonomi">
+                    <span>MAKRO EKONOMI</span>
+                    <span class="cta-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <!-- governor images (left/right) -->
+            <img class="hero-person hero-person-left reveal reveal-left d-2" src="assets/images/gubernur-1.png"
+                alt="Tokoh kiri" />
+            <img class="hero-person hero-person-right reveal reveal-right d-2" src="assets/images/gubernur-2.png"
+                alt="Tokoh kanan" />
+        </div>
+    </header>
+
+    <!-- SECTION: CARDS GRID -->
+    <section class="section section-cards" id="makro-ekonomi">
+        <div class="container-xxl">
+            <div class="section-head reveal reveal-up d-1">
+                <h2 class="section-title">
+                    Jawa Timur berperan sebagai Penggerak Pertumbuhan<br />
+                    dan Stabilitas Ekonomi Nasional
+                </h2>
+            </div>
+
+            <div class="makro-grid">
+                <!-- Pertumbuhan Ekonomi (span 2 baris) -->
+                <article class="glass-card card-growth reveal reveal-up d-2">
+                    <div class="card-top">
+                        <h3 class="card-title">Pertumbuhan<br />Ekonomi</h3>
+                        <img class="card-illus" src="assets/images/illus-growth.png" alt="" />
+                    </div>
+                    <p class="card-text">
+                        Triwulan III-2025, Jawa Timur tumbuh 5,22% (yoy) dan menjadi penyumbang
+                        perekonomian terbesar kedua di Pulau Jawa dengan kontribusi 25,65% dan 14,54% secara Nasional.
+                    </p>
+                </article>
+
+                <!-- Inflasi (baris 1 kolom 2) -->
+                <article class="glass-card card-inflasi reveal reveal-up d-2">
+                    <div class="card-top">
+                        <h3 class="card-title">Inflasi</h3>
+                        <img class="card-illus" src="assets/images/illus-inflation.png" alt="" />
+                    </div>
+                    <p class="card-text">
+                        Inflasi Jawa Timur Desember 2025 sebesar 2,93% (yoy) dan 0,76% (mtm)
+                        dimana seluruh Kab/Kota IHK Jawa Timur mengalami inflasi secara bulanan.
+                    </p>
+                </article>
+
+                <!-- Quote (span 2 baris, kolom 3) -->
+                <article class="glass-card glass-card--quote card-quote reveal reveal-up d-2">
+                    <p class="quote">
+                        Pertumbuhan ekonomi Jawa Timur inklusif, didukung inflasi yang terkendali
+                        dan daya beli masyarakat yang terjaga.
+                    </p>
+                    <img class="quote-illus" src="assets/images/illus-steps.png" alt="" />
+                </article>
+
+                <!-- Ekspor Impor (baris 2 kolom 2) -->
+                <article class="glass-card card-ekspor reveal reveal-up d-2">
+                    <div class="card-top">
+                        <h3 class="card-title">Ekspor<br />Impor</h3>
+                        <img class="card-illus" src="assets/images/illus-export.png" alt="" />
+                    </div>
+                    <ul class="card-list">
+                        <li>Ekspor Jawa Timur US$27,63 miliar, naik 15,33% (ctc).</li>
+                        <li>Impor Jawa Timur US$26,68 miliar, turun 3,42% (ctc).</li>
+                    </ul>
+                </article>
+
+                <!-- Realisasi Investasi (baris 2 kolom 1 bawah? tetap di kolom 1, tapi nanti ada IPM di baris 3) -->
+                <article class="glass-card card-investasi reveal reveal-up d-2">
+                    <div class="card-top">
+                        <h3 class="card-title">Realisasi<br />Investasi</h3>
+                        <img class="card-illus" src="assets/images/illus-invest.png" alt="" />
+                    </div>
+                    <ul class="card-list">
+                        <li>Realisasi Jawa Timur tahun 2024 merupakan capaian tertinggi dalam 10 tahun terakhir.</li>
+                        <li>Realisasi Jan s.d. Sep 2025 mencapai Rp 105,1 T.</li>
+                    </ul>
+                </article>
+
+                <!-- IPM (baris 3 kolom 1) -->
+                <article class="glass-card card-ipm reveal reveal-up d-2">
+                    <div class="card-top">
+                        <h3 class="card-title">Indeks<br />Pembangunan<br />Manusia</h3>
+                        <img class="card-illus" src="assets/images/illus-ipm.png" alt="" />
+                    </div>
+                    <p class="card-text">
+                        IPM Jawa Timur 2025 mencapai 76,13 meningkat 1,04% dibandingkan tahun 2024.
+                        Peningkatan terjadi pada semua dimensi, terutama standar hidup layak dan pengetahuan.
+                    </p>
+                </article>
+
+                <!-- Kemiskinan (baris 3 kolom 2) -->
+                <article class="glass-card card-kemiskinan reveal reveal-up d-2">
+                    <div class="card-top">
+                        <h3 class="card-title">Kemiskinan</h3>
+                        <img class="card-illus" src="assets/images/illus-poverty.png" alt="" />
+                    </div>
+                    <div class="card-meta">Maret 2025</div>
+                    <ul class="card-list">
+                        <li>Kemiskinan Jawa Timur 9,50% atau 3,876 juta orang, turun 0,06% point terhadap Sept 2024.
+                        </li>
+                        <li>Garis Kemiskinan Rp558.029/kapita/bulan.</li>
+                    </ul>
+                </article>
+
+                <!-- Ketenagakerjaan (baris 3 kolom 3) -->
+                <article class="glass-card card-ketenagakerjaan reveal reveal-up d-2">
+                    <div class="card-top">
+                        <h3 class="card-title">Ketenagakerjaan</h3>
+                        <img class="card-illus" src="assets/images/illus-workers.png" alt="" />
+                    </div>
+                    <div class="card-meta">Agustus 2025</div>
+                    <ul class="card-list">
+                        <li>TPAK Jawa Timur 73,98%, naik 0,53% (yoy).</li>
+                        <li>TPT 3,88%, turun 0,31%.</li>
+                    </ul>
+
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- NEWS -->
+    <section class="section section-news">
+        <div class="container-xxl">
+            <div class="news-head">
+                <h2 class="section-title reveal reveal-up d-1">NEWS</h2>
+                <a class="news-more" href="#" aria-label="Lihat semua">➜</a>
+            </div>
+
+            <div class="news-slider reveal reveal-up d-2" data-slider>
+                <!-- prev/next -->
+                <button class="news-nav news-prev" type="button" aria-label="Sebelumnya" data-prev>
+                    <svg viewBox="0 0 24 24" width="30" height="30" fill="none">
+                        <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <button class="news-nav news-next" type="button" aria-label="Berikutnya" data-next>
+                    <svg viewBox="0 0 24 24" width="30" height="30" fill="none">
+                        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <!-- track -->
+                <div class="news-track" data-track>
+                    <!-- SLIDE 1 (4 cards) -->
+                    <div class="news-page" data-page>
+                        <a class="news-card2" href="#">
+                            <img src="assets/images/news-1.png" alt="News 1" />
+                            <div class="news-overlay">
+                                <div class="news-title">KADIN UNGKAP PROYEKSI PEREKONOMIAN JAWA TIMUR POSITIF PADA 2026
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="news-card2" href="#">
+                            <img src="assets/images/news-2.png" alt="News 2" />
+                            <div class="news-overlay">
+                                <div class="news-title">HARGA CABAI RAWIT SUMBANG INFLASI JATIM SEBESAR 0,76% PADA
+                                    DESEMBER 2025</div>
+                            </div>
+                        </a>
+
+                        <a class="news-card2" href="#">
+                            <img src="assets/images/news-1.png" alt="News 3" />
+                            <div class="news-overlay">
+                                <div class="news-title">JUDUL BERITA 3 DI SINI</div>
+                            </div>
+                        </a>
+
+                        <a class="news-card2" href="#">
+                            <img src="assets/images/news-2.png" alt="News 4" />
+                            <div class="news-overlay">
+                                <div class="news-title">JUDUL BERITA 4 DI SINI</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- SLIDE 2 (4 cards) -->
+                    <div class="news-page" data-page>
+                        <a class="news-card2" href="#">
+                            <img src="assets/images/news-5.png" alt="News 5" />
+                            <div class="news-overlay">
+                                <div class="news-title">JUDUL BERITA 5 DI SINI</div>
+                            </div>
+                        </a>
+
+                        <a class="news-card2" href="#">
+                            <img src="assets/images/news-6.png" alt="News 6" />
+                            <div class="news-overlay">
+                                <div class="news-title">JUDUL BERITA 6 DI SINI</div>
+                            </div>
+                        </a>
+
+                        <a class="news-card2" href="#">
+                            <img src="assets/images/news-7.png" alt="News 7" />
+                            <div class="news-overlay">
+                                <div class="news-title">JUDUL BERITA 7 DI SINI</div>
+                            </div>
+                        </a>
+
+                        <a class="news-card2" href="#">
+                            <img src="assets/images/news-8.png" alt="News 8" />
+                            <div class="news-overlay">
+                                <div class="news-title">JUDUL BERITA 8 DI SINI</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- dots -->
+                <div class="news-dots" data-dots aria-label="Paginasi berita"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CONTACT -->
+    <footer class="section section-contact">
+        <div class="container-xxl">
+            <div class="contact-grid">
+                <div>
+                    <h2 class="contact-title">Contact <span>Us</span></h2>
+                </div>
+
+                <div class="contact-info">
+                    <div>Jl. Pahlawan No.110 Surabaya</div>
+                    <div>031 3550958</div>
+                    <div>ekonomi@jatimprov.go.id</div>
+                </div>
+            </div>
+
+            <p class="contact-desc">
+                Biro Perekonomian merupakan unsur Sekretariat Daerah Provinsi Jawa Timur, dipimpin oleh seorang Kepala
+                Biro,
+                yang berada di bawah dan bertanggung jawab kepada Gubernur melalui Sekretaris Daerah.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/reveal.js"></script>
+    <script src="assets/js/news-slider.js"></script>
+
+</body>
+
+</html>
