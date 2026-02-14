@@ -604,4 +604,6 @@
   .growth-illus{ display: none !important; }
   .pill-select{ min-width: 100%; }
   .pill-menu{ min-width: 100%; }
+  .donut-center-title{font-size: 16px;}
+  .donut-center-sub{font-size: 16px;}
 }
