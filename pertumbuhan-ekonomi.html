@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pertumbuhan Ekonomi | Data Ekonomi Jawa Timur</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/pertumbuhan-ekonomi.css" />
+
+</head>
+
+<body class="home page-growth">
+
+    <!-- NAVBAR (konsisten dengan Home) -->
+    <nav class="topnav">
+        <div class="container-xxl d-flex align-items-center justify-content-end gap-4">
+            <a class="topnav-link" href="home.html">Home</a>
+            <a class="topnav-link is-active" href="pertumbuhan-ekonomi.html">Pertumbuhan Ekonomi</a>
+            <a class="topnav-link" href="inflasi.html">Inflasi</a>
+            <a class="topnav-link" href="epik.html">EPIK</a>
+        </div>
+    </nav>
+
+    <!-- HERO / HEADER -->
+    <header class="growth-hero">
+        <div class="container-xxl growth-hero-inner">
+
+            <!-- kiri -->
+            <div class="growth-hero-left">
+                <!-- <div class="growth-eyebrow reveal reveal-up d-1">Pertumbuhan Ekonomi</div> -->
+
+                <h1 class="growth-title reveal reveal-up d-2">
+                    <span class="growth-title-main">Pertumbuhan Ekonomi</span><br />
+                    <span class="growth-title-accent">JAWA TIMUR</span>
+                </h1>
+                <br>
+                <!-- filter row -->
+                <div class="growth-filters reveal reveal-up d-3">
+                    <div class="filter-box">
+                        <div class="filter-label">TAHUN</div>
+                        <div class="filter-control">
+                            <select class="filter-select" aria-label="Pilih Tahun">
+                                <option selected>2024</option>
+                                <option>2023</option>
+                                <option>2022</option>
+                            </select>
+                            <span class="filter-caret" aria-hidden="true">›</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-box">
+                        <div class="filter-label">TRIWULAN</div>
+                        <div class="filter-control">
+                            <select class="filter-select" aria-label="Pilih Triwulan">
+                                <option selected>-</option>
+                                <option>Triwulan I</option>
+                                <option>Triwulan II</option>
+                                <option>Triwulan III</option>
+                                <option>Triwulan IV</option>
+                            </select>
+                            <span class="filter-caret" aria-hidden="true">›</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KPI card -->
+                <article class="glass-card growth-kpi reveal reveal-up d-4">
+                    <div class="kpi-strip">
+                        <div class="kpi-item">
+                            <div class="kpi-big">4,70</div>
+                            <div class="kpi-sub">Q to Q</div>
+                        </div>
+                        <div class="kpi-item">
+                            <div class="kpi-big">2,30</div>
+                            <div class="kpi-sub">C to C</div>
+                        </div>
+                        <div class="kpi-item">
+                            <div class="kpi-big">6,29</div>
+                            <div class="kpi-sub">Y on Y</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-lines">
+                        <div class="kpi-line">
+                            <div class="kpi-line-label">PDRB ADHK (Miliar Rp)</div>
+                            <div class="kpi-line-val">3.168.295,58</div>
+                        </div>
+                        <div class="kpi-line">
+                            <div class="kpi-line-label">PDRB ADHB (Miliar Rp)</div>
+                            <div class="kpi-line-val">1.935.810,15</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- kanan -->
+            <div class="growth-hero-right reveal reveal-up d-2">
+                <img class="growth-illus" src="assets/images/illus-growth.png" alt="Ilustrasi Pertumbuhan Ekonomi" />
+
+                <!-- Grafik -->
+                <div class="growth-chart-card">
+                    <div class="growth-chart-title">Pertumbuhan Ekonomi (yoy) - %</div>
+                    <canvas id="growthYoyChart" height="140" aria-label="Grafik pertumbuhan ekonomi yoy"></canvas>
+                </div>
+
+
+                <!-- <article class="glass-card growth-chart-card reveal reveal-up d-3">
+                    <div class="chart-head">
+                        <div class="chart-title">Pertumbuhan Ekonomi (yoy) - %</div>
+                        <div class="chart-note">2013–2024</div>
+                    </div>
+
+                    <div class="chart-wrap" role="img"
+                        aria-label="Grafik garis pertumbuhan ekonomi yoy 2013 sampai 2024">
+                        <svg class="chart-svg" viewBox="0 0 900 260" preserveAspectRatio="none">
+                            <g class="chart-grid">
+                                <line x1="0" y1="50" x2="900" y2="50" />
+                                <line x1="0" y1="110" x2="900" y2="110" />
+                                <line x1="0" y1="170" x2="900" y2="170" />
+                                <line x1="0" y1="230" x2="900" y2="230" />
+                            </g>
+
+                            <path class="chart-line" d="M30,70
+                   C90,80 130,86 170,84
+                   S260,80 310,82
+                   S390,88 450,78
+                   S520,210 560,220
+                   S640,110 690,90
+                   S780,100 870,96" />
+
+                            <g class="chart-points">
+                                <circle cx="30" cy="70" r="5" />
+                                <circle cx="170" cy="84" r="5" />
+                                <circle cx="310" cy="82" r="5" />
+                                <circle cx="450" cy="78" r="5" />
+                                <circle cx="560" cy="220" r="5" />
+                                <circle cx="690" cy="90" r="5" />
+                                <circle cx="870" cy="96" r="5" />
+                            </g>
+
+                            <g class="chart-tags">
+                                <text x="445" y="70">5,57</text>
+                                <text x="545" y="248">-2,33</text>
+                                <text x="850" y="118">4,93</text>
+                            </g>
+                        </svg>
+
+                        <div class="chart-x">
+                            <span>2013</span><span>2014</span><span>2015</span><span>2016</span><span>2017</span><span>2018</span>
+                            <span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span>
+                        </div>
+                    </div>
+                </article> -->
+            </div>
+
+        </div>
+    </header>
+
+    <!-- SECTION: PDRB TABLE + DONUT -->
+    <section class="section section-growth-body">
+        <div class="container-xxl">
+
+            <div class="growth-body-head reveal reveal-up d-1">
+                <div class="growth-body-filter">
+                    <div class="pill-dd" data-pill-dd>
+                        <button class="pill-select" type="button" aria-haspopup="listbox" aria-expanded="false"
+                            data-pill-btn>
+                            <span data-pill-label>Semua Lapangan Usaha</span>
+                            <span class="pill-caret" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.6"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+
+                        </button>
+
+                        <div class="pill-menu" role="listbox" tabindex="-1" aria-label="Pilih Lapangan Usaha"
+                            data-pill-menu>
+                            <!-- options di-generate JS -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="growth-body-grid">
+
+                <!-- TABLE CARD -->
+                <article class="glass-card growth-table-card reveal reveal-up d-2">
+                    <div class="table-title">PDRB (Miliar Rp)</div>
+
+                    <div class="table-wrap" role="region" aria-label="Tabel PDRB">
+                        <table class="pdrb-table">
+                            <thead>
+                                <tr>
+                                    <th>SEKTOR</th>
+                                    <th>PDRB ADHB</th>
+                                    <th>PDRB ADHK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-lap="Industri">
+                                    <td>Industri Pengolahan</td>
+                                    <td>xxx.xxx</td>
+                                    <td>xxx.xxx</td>
+                                </tr>
+
+                                <tr data-lap="Perdagangan">
+                                    <td>Perdagangan Besar &amp; Eceran</td>
+                                    <td>xxx.xxx</td>
+                                    <td>xxx.xxx</td>
+                                </tr>
+
+                                <tr data-lap="Pertanian">
+                                    <td>Pertanian, Kehutanan, Perikanan</td>
+                                    <td>xxx.xxx</td>
+                                    <td>xxx.xxx</td>
+                                </tr>
+
+                                <tr data-lap="Konstruksi">
+                                    <td>Konstruksi</td>
+                                    <td>xxx.xxx</td>
+                                    <td>xxx.xxx</td>
+                                </tr>
+
+                                <tr data-lap="Lainnya">
+                                    <td>Lainnya</td>
+                                    <td>xxx.xxx</td>
+                                    <td>xxx.xxx</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <div class="source-note">Sumber: BPS</div>
+                </article>
+
+                <!-- DONUT CARD -->
+                <article class="glass-card growth-donut-card reveal reveal-up d-2">
+                    <div class="donut-title">Struktur PDRB ADHB</div>
+
+                    <div class="donut-grid">
+                        <div class="donut-canvas-wrap">
+                            <canvas id="pdrbDonut" height="260" aria-label="Donut struktur PDRB ADHB"></canvas>
+
+                            <!-- label tengah (optional, jadi makin jelas) -->
+                            <div class="donut-center" aria-hidden="true">
+                                <div class="donut-center-title">Total</div>
+                                <div class="donut-center-value">100%</div>
+                                <div class="donut-center-sub">ADHB</div>
+                            </div>
+                        </div>
+
+                        <ul class="donut-legend" aria-label="Legenda" id="pdrbDonutLegend">
+                            <!-- bisa tetap manual, atau auto-generate (JS) -->
+                            <li data-idx="0"><span class="sw sw-a"></span> Industri</li>
+                            <li data-idx="1"><span class="sw sw-b"></span> Perdagangan</li>
+                            <li data-idx="2"><span class="sw sw-c"></span> Pertanian</li>
+                            <li data-idx="3"><span class="sw sw-d"></span> Konstruksi</li>
+                            <li data-idx="4"><span class="sw sw-e"></span> Lainnya</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="source-note">Sumber: BPS</div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (konsisten dengan Home) -->
+    <footer class="section section-contact">
+        <div class="container-xxl">
+            <div class="contact-grid">
+                <div>
+                    <h2 class="contact-title">Contact <span>Us</span></h2>
+                </div>
+
+                <div class="contact-info">
+                    <div>Jl. Pahlawan No.110 Surabaya</div>
+                    <div>031 3550958</div>
+                    <div>ekonomi@jatimprov.go.id</div>
+                </div>
+            </div>
+
+            <p class="contact-desc">
+                Biro Perekonomian merupakan unsur Sekretariat Daerah Provinsi Jawa Timur, dipimpin oleh seorang Kepala
+                Biro, yang berada di bawah dan bertanggung jawab kepada Gubernur melalui Sekretaris Daerah.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="assets/js/pertumbuhan-ekonomi-chart.js"></script>
+    <script src="assets/js/pertumbuhan-ekonomi-table-filter.js"></script>
+    <script src="assets/js/pertumbuhan-ekonomi-donut.js"></script>
+
+
+
+</body>
+
+</html>
