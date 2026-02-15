@@ -47,7 +47,7 @@
 
 .growth-filters{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 18px;
   max-width: 520px;
   margin-bottom: 18px;
@@ -79,8 +79,8 @@
   border: 0;
   outline: none;
 
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 14px;
   letter-spacing: .3px;
 
   padding: 14px 44px 14px 18px; /* ruang caret kanan */
@@ -575,6 +575,105 @@
 .donut-legend li:hover{
   color: rgba(255,255,255,.95);
 }
+
+/* =========================
+   Select2 - Wilayah (match filter-select)
+   ========================= */
+
+.select2-container{ width:100% !important; }
+
+.select2-container--default .select2-selection--single{
+  height: 48px !important;
+  border-radius: 14px !important;
+  background: transparent !important;
+  border: 0 !important;
+  display:flex !important;
+  align-items:center !important;
+}
+
+/* wrapper mengikuti .filter-control */
+#wilayahWrap .select2-container--default .select2-selection--single{
+  padding: 0 !important;
+}
+
+/* teks di dalam */
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  color: rgba(255,255,255,.92) !important;
+  line-height: 48px !important;
+  padding-left: 18px !important;
+  padding-right: 44px !important;
+  font-size: 14px !important;
+  letter-spacing: .3px !important;
+}
+
+/* placeholder */
+.select2-container--default .select2-selection--single .select2-selection__placeholder{
+  color: rgba(255,255,255,.55) !important;
+}
+
+/* caret bawaan select2 (panah) */
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  height: 48px !important;
+  right: 12px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+  border-color: rgba(255,255,255,.75) transparent transparent transparent !important;
+}
+
+/* dropdown panel */
+.select2-dropdown{
+  background: rgba(19, 19, 19, 0.95) !important;
+  border: 1px solid rgba(170,120,255,.35) !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+  box-shadow: 0 28px 80px rgba(0,0,0,.60) !important;
+}
+
+/* search box */
+.select2-container--default .select2-search--dropdown .select2-search__field{
+  width: calc(100% - 20px) !important;
+  margin: 10px !important;
+  padding: 10px 12px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(170,120,255,.35) !important;
+  background: rgba(255,255,255,.08) !important;
+  color: rgba(255,255,255,.95) !important;
+  outline: none !important;
+}
+
+/* list scroll */
+.select2-results__options{
+  max-height: 260px !important;
+}
+
+/* option */
+.select2-container--default .select2-results__option{
+  color: rgba(255,255,255,.90) !important;
+  padding: 10px 12px !important;
+  margin: 6px 10px !important;
+  border-radius: 10px !important;
+}
+
+/* hover & selected */
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+  background: linear-gradient(90deg, rgba(170,120,255,.22), rgba(90,210,255,.14)) !important;
+  color: rgba(255,255,255,.96) !important;
+}
+.select2-container--default .select2-results__option--selected{
+  background: rgba(255,255,255,.06) !important;
+}
+
+/* clear (x) */
+.select2-container--default .select2-selection--single .select2-selection__clear{
+  color: rgba(255,255,255,.75) !important;
+  margin-right: 8px !important;
+}
+
+/* pastikan dropdown selalu di atas semua card/nav */
+.select2-container--open { z-index: 999999 !important; }
+.select2-dropdown { z-index: 999999 !important; }
+.select2-container { width: 100% !important; }
+.filter-control.is-select2 .filter-caret { display:none !important; }
 
 
 /* ===== Responsive ===== */

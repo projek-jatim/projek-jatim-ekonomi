@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/pertumbuhan-ekonomi.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 
 </head>
 
@@ -41,8 +43,8 @@
                 <div class="growth-filters reveal reveal-up d-3">
                     <div class="filter-box">
                         <div class="filter-label">TAHUN</div>
-                        <div class="filter-control">
-                            <select class="filter-select" aria-label="Pilih Tahun">
+                        <div class="filter-control is-select2">
+                            <select id="tahunSelect" class="filter-select" aria-label="Pilih Tahun">
                                 <option selected>2024</option>
                                 <option>2023</option>
                                 <option>2022</option>
@@ -53,13 +55,65 @@
 
                     <div class="filter-box">
                         <div class="filter-label">TRIWULAN</div>
-                        <div class="filter-control">
-                            <select class="filter-select" aria-label="Pilih Triwulan">
-                                <option selected>-</option>
+                        <div class="filter-control is-select2">
+                            <select id="triwulanSelect" class="filter-select" aria-label="Pilih Triwulan">
+                                <option value="">Pilih Triwulan</option>
+                                <!-- <option selected>-</option> -->
                                 <option>Triwulan I</option>
                                 <option>Triwulan II</option>
                                 <option>Triwulan III</option>
                                 <option>Triwulan IV</option>
+                            </select>
+                            <span class="filter-caret" aria-hidden="true">›</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-box">
+                        <div class="filter-label">WILAYAH</div>
+                        <div class="filter-control is-select2" id="wilayahWrap">
+                            <select id="wilayahSelect" class="filter-select" style="width:100%">
+                                <option value="">Pilih Wilayah</option>
+                                <!-- <option>Jawa Timur</option> -->
+                                <!-- KOTA -->
+                                <option>Kota Surabaya</option>
+                                <option>Kota Malang</option>
+                                <option>Kota Batu</option>
+                                <option>Kota Pasuruan</option>
+                                <option>Kota Probolinggo</option>
+                                <option>Kota Mojokerto</option>
+                                <option>Kota Madiun</option>
+                                <option>Kota Kediri</option>
+                                <option>Kota Blitar</option>
+                                <!-- Kab -->
+                                <option>Kab Bangkalan</option>
+                                <option>Kab Banyuwangi</option>
+                                <option>Kab Blitar</option>
+                                <option>Kab Bojonegoro</option>
+                                <option>Kab Bondowoso</option>
+                                <option>Kab Gresik</option>
+                                <option>Kab Jember</option>
+                                <option>Kab Jombang</option>
+                                <option>Kab Kediri</option>
+                                <option>Kab Lamongan</option>
+                                <option>Kab Lumajang</option>
+                                <option>Kab Madiun</option>
+                                <option>Kab Magetan</option>
+                                <option>Kab Malang</option>
+                                <option>Kab Mojokerto</option>
+                                <option>Kab Nganjuk</option>
+                                <option>Kab Ngawi</option>
+                                <option>Kab Pacitan</option>
+                                <option>Kab Pamekasan</option>
+                                <option>Kab Pasuruan</option>
+                                <option>Kab Ponorogo</option>
+                                <option>Kab Probolinggo</option>
+                                <option>Kab Sampang</option>
+                                <option>Kab Sidoarjo</option>
+                                <option>Kab Situbondo</option>
+                                <option>Kab Sumenep</option>
+                                <option>Kab Trenggalek</option>
+                                <option>Kab Tuban</option>
+                                <option>Kab Tulungagung</option>
                             </select>
                             <span class="filter-caret" aria-hidden="true">›</span>
                         </div>
@@ -105,57 +159,7 @@
                     <div class="growth-chart-title">Pertumbuhan Ekonomi (yoy) - %</div>
                     <canvas id="growthYoyChart" height="140" aria-label="Grafik pertumbuhan ekonomi yoy"></canvas>
                 </div>
-
-
-                <!-- <article class="glass-card growth-chart-card reveal reveal-up d-3">
-                    <div class="chart-head">
-                        <div class="chart-title">Pertumbuhan Ekonomi (yoy) - %</div>
-                        <div class="chart-note">2013–2024</div>
-                    </div>
-
-                    <div class="chart-wrap" role="img"
-                        aria-label="Grafik garis pertumbuhan ekonomi yoy 2013 sampai 2024">
-                        <svg class="chart-svg" viewBox="0 0 900 260" preserveAspectRatio="none">
-                            <g class="chart-grid">
-                                <line x1="0" y1="50" x2="900" y2="50" />
-                                <line x1="0" y1="110" x2="900" y2="110" />
-                                <line x1="0" y1="170" x2="900" y2="170" />
-                                <line x1="0" y1="230" x2="900" y2="230" />
-                            </g>
-
-                            <path class="chart-line" d="M30,70
-                   C90,80 130,86 170,84
-                   S260,80 310,82
-                   S390,88 450,78
-                   S520,210 560,220
-                   S640,110 690,90
-                   S780,100 870,96" />
-
-                            <g class="chart-points">
-                                <circle cx="30" cy="70" r="5" />
-                                <circle cx="170" cy="84" r="5" />
-                                <circle cx="310" cy="82" r="5" />
-                                <circle cx="450" cy="78" r="5" />
-                                <circle cx="560" cy="220" r="5" />
-                                <circle cx="690" cy="90" r="5" />
-                                <circle cx="870" cy="96" r="5" />
-                            </g>
-
-                            <g class="chart-tags">
-                                <text x="445" y="70">5,57</text>
-                                <text x="545" y="248">-2,33</text>
-                                <text x="850" y="118">4,93</text>
-                            </g>
-                        </svg>
-
-                        <div class="chart-x">
-                            <span>2013</span><span>2014</span><span>2015</span><span>2016</span><span>2017</span><span>2018</span>
-                            <span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span>
-                        </div>
-                    </div>
-                </article> -->
             </div>
-
         </div>
     </header>
 
@@ -297,13 +301,19 @@
     </footer>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="assets/js/reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="assets/js/pertumbuhan-ekonomi-chart.js"></script>
     <script src="assets/js/pertumbuhan-ekonomi-table-filter.js"></script>
     <script src="assets/js/pertumbuhan-ekonomi-donut.js"></script>
+    <script src="assets/js/wilayah-select.js"></script>
 
 
+    <script>
+
+    </script>
 
 </body>
 
