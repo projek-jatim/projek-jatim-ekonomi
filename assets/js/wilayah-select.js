@@ -4,7 +4,7 @@ $(function () {
 
         $el.select2({
             placeholder: ph,
-            allowClear: true,
+            allowClear: false,
             width: '100%',
             dropdownParent: $(document.body),
             minimumResultsForSearch: Infinity // default: search disembunyikan (untuk tahun/triwulan)
@@ -25,8 +25,9 @@ $(function () {
     // Wilayah: search aktif
     $('#wilayahSelect').select2({
         placeholder: 'Pilih Wilayah',
-        allowClear: true,
+        allowClear: false,
         width: '100%',
+        dropdownAutoWidth: false,
         dropdownParent: $(document.body),
         minimumResultsForSearch: 0 // selalu tampil search
     }).on('select2:open', function () {

@@ -1,0 +1,399 @@
+/* =========================
+   Inflasi Page (Public)
+   ========================= */
+
+.page-inflasi{
+  padding-top: 0;
+}
+
+/* HERO */
+.inflasi-hero{
+  padding-top: 96px;
+  padding-bottom: 5px;
+}
+
+.inflasi-hero-inner{
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.inflasi-eyebrow{
+  opacity: .85;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-top: 18px;
+}
+
+.inflasi-title{
+  margin: 10px 0 12px;
+  line-height: 1.02;
+}
+.inflasi-title-main{
+  font-size: clamp(40px, 4.4vw, 68px);
+  font-weight: 650;
+  letter-spacing: .6px;
+}
+.inflasi-title-accent{
+  font-size: clamp(44px, 4.8vw, 74px);
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  background: linear-gradient(90deg, rgba(170,120,255,1), rgba(90,210,255,1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.inflasi-sub{
+  color: rgba(255,255,255,.70);
+  font-weight: 600;
+  max-width: 58ch;
+  margin-bottom: 16px;
+}
+
+/* Filters */
+.inflasi-filters{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.2fr;
+  gap: 18px;
+  max-width: 720px;
+  margin-bottom: 18px;
+}
+
+.filter-box .filter-label{
+  font-weight: 800;
+  letter-spacing: .8px;
+  opacity: .9;
+  margin-bottom: 8px;
+}
+
+/* match Growth filter-control feel */
+.filter-control{
+  position: relative;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border: 1px solid rgba(170,120,255,.40);
+  box-shadow: 0 22px 70px rgba(0,0,0,.45);
+  overflow: hidden;
+}
+.filter-select{
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: transparent;
+  color: rgba(255,255,255,.92);
+  border: 0;
+  outline: none;
+
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .3px;
+
+  padding: 14px 44px 14px 18px;
+}
+
+.filter-select option{
+  background: #0b0b0b;
+  color: rgba(255,255,255,.92);
+}
+.filter-select{ color-scheme: dark; }
+
+.filter-caret{
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  opacity: .85;
+}
+
+/* KPI strip */
+.inflasi-kpi{
+  padding: 0;
+  max-width: 720px;
+}
+.inflasi-kpi-strip{
+  border-radius: 22px;
+  padding: 16px 18px;
+  background: linear-gradient(90deg, rgba(10,90,220,.75), rgba(170,120,255,.78));
+  border: 1px solid rgba(255,255,255,.14);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.kpi-item{ text-align: center; }
+.kpi-big{
+  font-size: clamp(26px, 2.2vw, 42px);
+  font-weight: 900;
+  line-height: 1;
+}
+.kpi-sub{
+  margin-top: 6px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: .9;
+}
+.kpi-note{
+  margin-top: 10px;
+  color: rgba(255,255,255,.60);
+  font-weight: 600;
+}
+
+/* Hero right: illus */
+.inflasi-hero-right{
+  display: grid;
+  justify-items: end;
+  gap: 18px;
+}
+
+.inflasi-illus-card{
+  width: min(520px, 100%);
+  border-radius: 26px;
+  padding: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 28px 80px rgba(0,0,0,.55);
+  overflow: hidden;
+  position: relative;
+}
+.inflasi-illus-card::before{
+  content:"";
+  position:absolute; inset:0;
+  padding: 1px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(170,120,255,.9), rgba(0,0,0,0), rgba(90,210,255,.65));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events:none;
+}
+.inflasi-illus{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  filter: drop-shadow(0 26px 70px rgba(0,0,0,.60));
+  opacity: .95;
+  background: rgba(0,0,0,.25);
+}
+.illus-caption{
+  margin-top: 10px;
+  color: rgba(255,255,255,.55);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* BODY */
+.section-inflasi-body{
+  padding-top: 5px;
+  padding-bottom: 36px;
+}
+
+/* Cards */
+.inflasi-main-card,
+.inflasi-card{
+  position: relative;
+  border-radius: 28px;
+  padding: 22px 22px 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  box-shadow: 0 28px 80px rgba(0,0,0,.55);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+.inflasi-main-card::before,
+.inflasi-card::before{
+  content:"";
+  position:absolute; inset:0;
+  padding: 1px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(170,120,255,.9), rgba(0,0,0,0), rgba(90,210,255,.65));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events:none;
+}
+
+.card-head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.card-title{
+  font-weight: 900;
+  letter-spacing: .4px;
+  font-size: 20px;
+  opacity: .95;
+}
+.card-note{
+  color: rgba(255,255,255,.55);
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 6px;
+  max-width: 70ch;
+}
+
+.chip{
+  border-radius: 999px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.22);
+  color: rgba(255,255,255,.78);
+  font-weight: 800;
+  letter-spacing: .3px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* chart panel */
+.chart-panel{
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0,0,0,.20);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 14px 14px 10px;
+}
+.chart-panel canvas{
+  width: 100% !important;
+  height: 320px !important;
+  display: block;
+}
+
+.inflasi-main-card .chart-panel canvas{
+  height: 360px !important;
+}
+
+/* grid 2 columns sections */
+.inflasi-grid-2{
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.source-note{
+  margin-top: 12px;
+  color: rgba(255,255,255,.55);
+  font-weight: 700;
+}
+
+/* =========================
+   Select2 - Wilayah (match filter-select)
+   ========================= */
+.select2-container{ width:100% !important; }
+
+.select2-container--default .select2-selection--single{
+  height: 48px !important;
+  border-radius: 14px !important;
+  background: transparent !important;
+  border: 0 !important;
+  display:flex !important;
+  align-items:center !important;
+}
+#wilayahWrap .select2-container--default .select2-selection--single{
+  padding: 0 !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  color: rgba(255,255,255,.92) !important;
+  line-height: 48px !important;
+  padding-left: 18px !important;
+  padding-right: 44px !important;
+  font-size: 14px !important;
+  letter-spacing: .3px !important;
+  font-weight: 600 !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder{
+  color: rgba(255,255,255,.55) !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  height: 48px !important;
+  right: 12px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+  border-color: rgba(255,255,255,.75) transparent transparent transparent !important;
+}
+
+/* dropdown panel */
+.select2-dropdown{
+  background: rgba(19, 19, 19, 0.95) !important;
+  border: 1px solid rgba(170,120,255,.35) !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+  box-shadow: 0 28px 80px rgba(0,0,0,.60) !important;
+}
+
+/* search box */
+.select2-container--default .select2-search--dropdown .select2-search__field{
+  width: calc(100% - 20px) !important;
+  margin: 10px !important;
+  padding: 10px 12px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(170,120,255,.35) !important;
+  background: rgba(255,255,255,.08) !important;
+  color: rgba(255,255,255,.95) !important;
+  outline: none !important;
+}
+.select2-results__options{ max-height: 260px !important; }
+
+.select2-container--default .select2-results__option{
+  color: rgba(255,255,255,.90) !important;
+  padding: 10px 12px !important;
+  margin: 6px 10px !important;
+  border-radius: 10px !important;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+  background: linear-gradient(90deg, rgba(170,120,255,.22), rgba(90,210,255,.14)) !important;
+  color: rgba(255,255,255,.96) !important;
+}
+.select2-container--default .select2-results__option--selected{
+  background: rgba(255,255,255,.06) !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__clear{
+  color: rgba(255,255,255,.75) !important;
+  margin-right: 8px !important;
+}
+.select2-container--open { z-index: 999999 !important; }
+.select2-dropdown { z-index: 999999 !important; }
+.filter-control.is-select2 .filter-caret { display:none !important; }
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px){
+  .inflasi-hero-inner{
+    grid-template-columns: 1fr;
+  }
+  .inflasi-hero-right{
+    justify-items: start;
+  }
+}
+
+@media (max-width: 900px){
+  .inflasi-grid-2{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px){
+  .inflasi-filters{
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+  .inflasi-illus-card{
+    width: 100%;
+  }
+  .inflasi-main-card .chart-panel canvas,
+  .chart-panel canvas{
+    height: 280px !important;
+  }
+}
