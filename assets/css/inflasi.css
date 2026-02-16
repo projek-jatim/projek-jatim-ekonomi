@@ -118,7 +118,7 @@
 .inflasi-kpi-strip{
   border-radius: 22px;
   padding: 16px 18px;
-  background: linear-gradient(90deg, rgba(10,90,220,.75), rgba(170,120,255,.78));
+  background: linear-gradient(90deg, rgba(10, 101, 220, 0.75), rgba(170,120,255,.78));
   border: 1px solid rgba(255,255,255,.14);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

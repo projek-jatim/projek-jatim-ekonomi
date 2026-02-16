@@ -185,10 +185,6 @@
                 <!-- Stok (treemap custom) -->
                 <div class="epik-card">
                     <div class="card-head">
-                        <div class="view-toggle" role="tablist" aria-label="Tampilan stok">
-                            <button id="btnStockHighlight" class="vt-btn is-active" type="button">Highlight</button>
-                            <button id="btnStockAnalytic" class="vt-btn" type="button">Analitik</button>
-                        </div>
                         <div>
                             <div class="card-title">Stok Komoditas</div>
                             <div class="card-note">Distribusi stok per korporasi (Kg)</div>
@@ -196,22 +192,15 @@
                         <div class="chip" id="chipStok">JATIM</div>
                     </div>
 
-                    <!-- Highlight (treemap/tiles) -->
-                    <div id="stockViewHighlight">
-                        <div class="treemap-wrap">
-                            <div id="stockTreemap" class="treemap"></div>
-                        </div>
-                        <div class="treemap-legend"> ... </div>
+                    <div class="treemap-wrap">
+                        <div id="stockTreemap" class="treemap"></div>
                     </div>
 
-                    <!-- Analitik (stacked bar) -->
-                    <div id="stockViewAnalytic" style="display:none;">
-                        <div class="chart-panel chart-panel-tall">
-                            <canvas id="chartStockStacked"></canvas>
-                        </div>
-                        <div class="source-note">Sumber: placeholder</div>
+                    <div class="treemap-legend">
+                        <div class="lg"><span class="sw sw-a"></span> Korporasi A</div>
+                        <div class="lg"><span class="sw sw-b"></span> Korporasi B</div>
+                        <div class="lg"><span class="sw sw-c"></span> Korporasi C</div>
                     </div>
-
 
                     <div class="source-note">Sumber: placeholder</div>
                 </div>
