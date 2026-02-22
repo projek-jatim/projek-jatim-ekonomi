@@ -12,18 +12,19 @@
     const ALL_VALUE = 'ALL';
 
     // ===== Build options =====
-    const cats = Array.from(
-        new Set(rows.map(r => (r.dataset.lap || '').trim()).filter(Boolean))
-    );
-
     const options = [{
             value: ALL_VALUE,
-            text: 'Semua Lapangan Usaha'
-        }]
-        .concat(cats.map(c => ({
-            value: c,
-            text: c
-        })));
+            text: 'Semua Kategori'
+        },
+        {
+            value: 'Lapangan Usaha',
+            text: 'Lapangan Usaha'
+        },
+        {
+            value: 'Pengeluaran',
+            text: 'Pengeluaran'
+        },
+    ];
 
     // Render options
     menu.innerHTML = '';
@@ -92,12 +93,12 @@
 
         // set label
         const chosen = options.find(o => o.value === value);
-        labelEl.textContent = chosen ? chosen.text : 'Semua Lapangan Usaha';
+        labelEl.textContent = chosen ? chosen.text : 'Semua Kategori';
 
         // filter rows
         rows.forEach(r => {
-            const lap = (r.dataset.lap || '').trim();
-            const show = (value === ALL_VALUE) || (lap === value);
+            const kat = (r.dataset.kat || '').trim();
+            const show = (value === ALL_VALUE) || (kat === value);
             r.style.display = show ? '' : 'none';
         });
 

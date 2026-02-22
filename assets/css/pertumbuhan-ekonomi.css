@@ -47,14 +47,14 @@
 
 .growth-filters{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 18px;
-  max-width: 520px;
+  max-width: 720px;
   margin-bottom: 18px;
 }
 
 .filter-box .filter-label{
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: .8px;
   opacity: .9;
   margin-bottom: 8px;
@@ -79,20 +79,20 @@
   border: 0;
   outline: none;
 
-  font-weight: 500;
+  font-weight: 800;
   font-size: 14px;
   letter-spacing: .3px;
 
   padding: 14px 44px 14px 18px; /* ruang caret kanan */
 }
 
-/* ini yang paling ngaruh: warna dropdown list (option) */
 .filter-select option{
   background: #0b0b0b;
   color: rgba(255,255,255,.92);
+  font-weight: 800;
+
 }
 
-/* beberapa browser butuh ini biar “dark feel” konsisten */
 .filter-select{
   color-scheme: dark;
 }
@@ -393,6 +393,9 @@
 .pdrb-table{
   width: 100%;
   border-collapse: collapse;
+
+  /*max-height: 270px;   /* 520px kira-kira ~10 baris */
+  /* overflow: auto; */
 }
 .pdrb-table thead th{
   background: rgba(190,160,255,.85);
@@ -402,6 +405,10 @@
   padding: 14px 14px;
   text-transform: uppercase;
   font-size: 12px;
+  
+  /* position: sticky;
+  top: 0;
+  z-index: 2; */
 }
 .pdrb-table tbody td{
   padding: 14px 14px;
@@ -515,6 +522,26 @@
 .sw-d{ background: rgba(220,120,255,.70); }
 .sw-e{ background: rgba(255,255,200,.92); }
 
+/* Sort Start*/
+.pdrb-table thead th[data-sort]{
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-right: 28px;
+}
+
+.pdrb-table thead th[data-sort]::after{
+  content: "↕";
+  position: absolute;
+  right: 10px;
+  opacity: .55;
+}
+
+.pdrb-table thead th.is-sorted-asc::after{ content: "↑"; opacity: .9; }
+.pdrb-table thead th.is-sorted-desc::after{ content: "↓"; opacity: .9; }
+
+/* Sort End */
+
 /* ===== Donut (Chart.js) ===== */
 .donut-canvas-wrap{
   position: relative;
@@ -602,10 +629,9 @@
   line-height: 48px !important;
   padding-left: 18px !important;
   padding-right: 44px !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   letter-spacing: .3px !important;
-  font-weight: 600;
-
+  font-weight: 800;
 }
 
 /* placeholder */
@@ -654,6 +680,7 @@
   padding: 10px 12px !important;
   margin: 6px 10px !important;
   border-radius: 10px !important;
+  font-weight: 800;
   
 }
 
@@ -691,7 +718,10 @@
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 1199px){
+  .growth-illus{ display: none !important; }
 
+}
 @media (max-width: 768px){
   .growth-filters{
     grid-template-columns: 1fr;

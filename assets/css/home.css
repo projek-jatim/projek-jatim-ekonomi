@@ -509,6 +509,42 @@ html { scroll-behavior: smooth; }
   max-width: 980px;
 }
 
+.contact-grid{
+  display: block; /* override grid 2 kolom */
+}
+
+.contact-header{
+  display: block;
+}
+
+.contact-info{
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  color: rgba(255,255,255,.82);
+  font-size: 18px;
+}
+
+.ci-item{
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 0px;
+  /* border-radius: 14px; */
+  /* background: rgba(255,255,255,.04); */
+  /* border: 1px solid rgba(255,255,255,.10); */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.ci-icon{
+  width: 18px;
+  height: 18px;
+  fill: rgba(255,255,255,.78);
+  flex: 0 0 auto;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1200px){
   .grid-3{ grid-template-columns: 1fr 1fr; }
@@ -572,6 +608,9 @@ html { scroll-behavior: smooth; }
   .news-card2 img{ height: 320px; }
   .news-prev{ left: 8px; }
   .news-next{ right: 8px; }
+
+  .contact-info{ font-size: 16px; }
+  .ci-item{ width: 100%; }
 }
 
 /* ANIMASI */
